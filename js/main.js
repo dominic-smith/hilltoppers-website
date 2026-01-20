@@ -1,28 +1,21 @@
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            }
-        });
+// Load component into placeholder
+function loadComponent(selector, url) {
+    const el = document.querySelector(selector);
+    if (el) {
+        fetch(url)
+            .then(r => r.text())
+            .then(html => { el.innerHTML = html; });
     }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadComponent('#header-placeholder', 'components/header.html');
+    loadComponent('#footer-placeholder', 'components/footer.html');
+
+    // Mobile nav toggle (uses event delegation since header loads async)
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.nav-toggle')) {
+            document.querySelector('.nav-menu')?.classList.toggle('active');
+        }
+    });
 });
