@@ -648,6 +648,87 @@ ul {
     font-size: 0.9rem;
 }
 
+/* Policies Page */
+.policy-list {
+    margin: 2rem 0;
+}
+
+.policy-list h3 {
+    color: var(--color-primary);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.policy-list ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.policy-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Membership Page */
+.membership-info {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.membership-card {
+    background: var(--color-primary);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.membership-price {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.membership-period {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+.membership-dates {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.membership-benefits {
+    margin: 1.5rem 0 2rem 1.5rem;
+}
+
+.membership-benefits li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.cost-section {
+    margin-bottom: 2rem;
+}
+
+.cost-section h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+}
+
+.cost-section ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.cost-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 /* Contact Page */
 .contact-grid {
     display: grid;
