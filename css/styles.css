@@ -716,6 +716,21 @@ ul {
     resize: vertical;
 }
 
+/* Form Embed */
+.form-embed {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.form-embed iframe {
+    display: block;
+    border: none;
+}
+
 /* Donate Section */
 .donate-section {
     background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
