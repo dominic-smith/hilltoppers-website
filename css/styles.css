@@ -971,3 +971,68 @@ ul {
         max-width: 300px;
     }
 }
+
+/* Schedule table */
+.table-wrap {
+    overflow-x: auto;
+    margin: 2rem 0 1rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    font-size: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.schedule-table th {
+    text-align: left;
+    background: #2d5a27;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.85rem 1rem;
+    white-space: nowrap;
+}
+
+.schedule-table td {
+    padding: 0.85rem 1rem;
+    border-top: 1px solid #e5e5e5;
+    vertical-align: top;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: #f7f9f6;
+}
+
+.schedule-table .sched-date {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .schedule-table {
+        min-width: 0;
+        font-size: 0.85rem;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 0.6rem 0.5rem;
+    }
+
+    .schedule-table th {
+        font-size: 0.75rem;
+    }
+
+    .schedule-table .sched-date,
+    .schedule-table th {
+        white-space: normal;
+    }
+}
